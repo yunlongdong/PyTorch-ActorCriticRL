@@ -3,6 +3,7 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 from torch.autograd import Variable
+import pdb
 
 import numpy as np
 import math
@@ -84,7 +85,7 @@ class Trainer:
 		# y_exp = r + gamma*Q'( s2, pi'(s2))
 		y_expected = r1 + GAMMA*next_val
 		# y_pred = Q( s1, a1)
-		y_predicted = torch.squeeze(self.critic.forward(s1, a1))
+		y_predicted = self.critic.forward(s1, a1)
 		# compute critic loss, and update the critic
 		loss_critic = F.smooth_l1_loss(y_predicted, y_expected)
 		self.critic_optimizer.zero_grad()
