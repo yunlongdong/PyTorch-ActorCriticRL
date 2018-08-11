@@ -54,5 +54,5 @@ Below is the performance of the model after 900 episodes. [Full Video](https://w
 * [DDPG paper by DeepMind](https://arxiv.org/abs/1509.02971) - DeepMind's DDPG paper
 * [DDPG blog by penami4911](http://pemami4911.github.io/blog/2016/08/21/ddpg-rl.html) - A very nicely explained blog with code in Tensorflow 
 * [A3C paper by DeepMind](https://arxiv.org/abs/1602.01783) - DeepMind's A3C paper
-* [A3C blog by yanpanlau](https://yanpanlau.github.io/2016/10/11/Torcs-Keras.html) - A3C explained nicely along with  Ornstein-Uhlenbeck expoloration
+* [A3C blog by yanpanlau](https://yanpanlau.github.io/2016/10/11/Torcs-Keras.html) - A3C explained nicely along with  Ornstein-Uhlenbeck exploration
 
