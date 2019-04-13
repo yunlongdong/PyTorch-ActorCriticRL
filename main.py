@@ -22,16 +22,17 @@ S_DIM = env.observation_space.shape[0]
 A_DIM = env.action_space.shape[0]
 A_MAX = env.action_space.high[0]
 
-print ' State Dimensions :- ', S_DIM
-print ' Action Dimensions :- ', A_DIM
-print ' Action Max :- ', A_MAX
+print(' State Dimensions :- ', S_DIM)
+print(' Action Dimensions :- ', A_DIM)
+print(' Action Max :- ', A_MAX)
 
 ram = buffer.MemoryBuffer(MAX_BUFFER)
 trainer = train.Trainer(S_DIM, A_DIM, A_MAX, ram)
+pdb.set_trace()
 
 for _ep in range(MAX_EPISODES):
 	observation = env.reset()
-	print 'EPISODE :- ', _ep
+	print('EPISODE :- ', _ep)
 	for r in range(MAX_STEPS):
 		env.render()
 		state = np.float32(observation)
@@ -73,4 +74,4 @@ for _ep in range(MAX_EPISODES):
 		trainer.save_models(_ep)
 
 
-print 'Completed episodes'
+print('Completed episodes')
