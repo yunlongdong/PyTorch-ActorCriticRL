@@ -18,11 +18,11 @@ Critic Network consists of a 3-layer neural network taking into input the state 
 
 ### Actor Optimization
 
-The policy is optimized by minimizing the loss :-  __*sum ( -Q(s,a) )*__.
+The policy is optimized by minimizing the loss :  __*-sum ( Q(s,a) )*__.
 
 ### Critic Optimization
 
-The critic is optimized by minimzing the loss :- __*L2( r + gamma\*Q(s',Pi(s')) - Q(s,a) )*__ on transition tutle __*(s, a, r, s')*__
+The critic is optimized by minimzing the loss : __*L2( r + gamma\*Q(s',Pi(s')) - Q(s,a) )*__ on transition tutle __*(s, a, r, s')*__
 
 ### Soft Updates
 
